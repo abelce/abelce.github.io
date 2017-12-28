@@ -164,25 +164,22 @@
 
         
         <a href="/2017/12/28/react-control-component/" class="archive-article-date">
-  	<time datetime="2017-12-28T06:22:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
+  	<time datetime="2017-12-28T06:25:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="非受控组件"><a href="#非受控组件" class="headerlink" title="非受控组件"></a>非受控组件</h4><hr>
-<ul>
+        <h4 id="非受控组件"><a href="#非受控组件" class="headerlink" title="非受控组件"></a>非受控组件</h4><ol>
 <li>组件没有设置value （checked）时，就可以称之为非受控组件；</li>
 <li>组件设置了defaultValue (defaultChecked)来表示组件的默认值，此时它只会被渲染一次，后续的渲染不起作用。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">	<span class="keyword">return</span> (&lt;input type="text" defaultValue="Tom" /&gt;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
+</ol>
 <p>上面的代码中，input的值不随外部调用者的状态变化而变化，由自己的状态来管理值。</p>
-<h4 id="受控组件"><a href="#受控组件" class="headerlink" title="受控组件"></a>受控组件</h4><hr>
-<p>在书写React组件的过程中，指定value或checked值，组件渲染出来的状态始终是给定的value值。下面的示例中，通过给input指定value，然后点击button, 输入框的值就会随着this.state.value的变化而变化，此时input受调用者控制。</p>
+<h4 id="受控组件"><a href="#受控组件" class="headerlink" title="受控组件"></a>受控组件</h4><p>在书写React组件的过程中，指定value或checked值，组件渲染出来的状态始终是给定的value值。下面的示例中，通过给input指定value，然后点击button, 输入框的值就会随着this.state.value的变化而变化，此时input受调用者控制。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">handleOnClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">this</span>.setState(&#123;</span><br><span class="line">		value: ++<span class="keyword">this</span>.state.value</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line">render()&#123;</span><br><span class="line">	<span class="keyword">return</span> (</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">		&lt;input type=<span class="string">"text"</span> value=&#123;<span class="keyword">this</span>.state.value&#125; /&gt;</span><br><span class="line">		&lt;button onClick=&#123;<span class="keyword">this</span>.handleOnClick&#125;&gt;&lt;/button&gt;</span><br><span class="line">	&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">	)</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><hr>
-<p><em>受控制组件与非受控组件的区别可以用一句简单的话概括：React组件根据其自身的值是否被调用者传递的props完全控制，控制则为受控组件，否则非受控组件。</em></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><em>受控制组件与非受控组件的区别可以用一句简单的话概括：React组件根据其自身的值是否被调用者传递的props完全控制，控制则为受控组件，否则非受控组件。</em></p>
 <p>PS: 如有建议或意见欢迎提出(^_^)v</p>
 
       
