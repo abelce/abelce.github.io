@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/1 | 博客</title>
+  <title>jquery.i18n.properties国际化 | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/01/index.html">
+  <meta name="description" content="介绍jquery.i18n.properties是一款轻量级的国际化插件，采用.properties文件来对javascript文件进行国际化，即根据用户指定的语言和国家编码来对解析对应的以”.properties”为后缀的文件。 123messages.propertiesmessages_zh_CN.propertiesmessages_en_US.properties APIjQuery.i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jquery.i18n.properties国际化">
+<meta property="og:url" content="http://yoursite.com/2018/01/14/jquery-i18n-properties国际化/index.html">
 <meta property="og:site_name" content="博客">
+<meta property="og:description" content="介绍jquery.i18n.properties是一款轻量级的国际化插件，采用.properties文件来对javascript文件进行国际化，即根据用户指定的语言和国家编码来对解析对应的以”.properties”为后缀的文件。 123messages.propertiesmessages_zh_CN.propertiesmessages_en_US.properties APIjQuery.i">
+<meta property="og:updated_time" content="2018-01-13T16:23:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客">
+<meta name="twitter:title" content="jquery.i18n.properties国际化">
+<meta name="twitter:description" content="介绍jquery.i18n.properties是一款轻量级的国际化插件，采用.properties文件来对javascript文件进行国际化，即根据用户指定的语言和国家编码来对解析对应的以”.properties”为后缀的文件。 123messages.propertiesmessages_zh_CN.propertiesmessages_en_US.properties APIjQuery.i">
   
     <link rel="alternative" href="/atom.xml" title="博客" type="application/atom+xml">
   
@@ -149,76 +153,238 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-jquery-i18n-properties国际化" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      jquery.i18n.properties国际化
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/14/jquery-i18n-properties国际化/" class="archive-article-date">
+
+        
+        <a href="/2018/01/14/jquery-i18n-properties国际化/" class="archive-article-date">
   	<time datetime="2018-01-13T16:20:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/14/jquery-i18n-properties国际化/">jquery.i18n.properties国际化</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>jquery.i18n.properties是一款轻量级的国际化插件，采用.properties文件来对javascript文件进行国际化，即根据用户指定的语言和国家编码来对解析对应的以”.properties”为后缀的文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">messages.properties</span><br><span class="line">messages_zh_CN.properties</span><br><span class="line">messages_en_US.properties</span><br></pre></td></tr></table></figure>
+<h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><p>jQuery.i18n.properties相对于其他的插件，只有及格API，即$.i18n.properties()、$.i18n.prop()、$.i18n.normaliseLanguageCode()等:</p>
+<h5 id="jQuery-i18n-properties"><a href="#jQuery-i18n-properties" class="headerlink" title="jQuery.i18n.properties"></a>jQuery.i18n.properties</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">可选</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">资源文件的名称</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:center">language</td>
+<td style="text-align:center">指定语言编码： （en： 英文， zh： 中文），或者同时指定语言编码和国家编码(例如： zh_CN, en_US)等</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">资源文件所在的路径</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:center">mode</td>
+<td style="text-align:center">加载模式： “vars”表示以javascript变量和函数的形式使用文件中的key，“map”表示以Map的方式使用文件中的key，“both”表示可以同时使用两种方式。如果资源文件中的key包含javascript中的关键字，只能使用map。默认值是vars。</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">cache</td>
+<td style="text-align:center">指定浏览器是否缓存资源文件，默认false</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">encoding</td>
+<td style="text-align:center">指定加载资源文件时的编码格式，默认utf-8</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">debug</td>
+<td style="text-align:center">控制台是否记录调试语句</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">async</td>
+<td style="text-align:center">指定该方式调用callback（回调）函数的方式，false: 所有的资源文件加载请求发送完毕后就调用会调函数， true：所有的资源加载并解析完成后才调用会调函数。默认false</td>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">namespace</td>
+<td style="text-align:center">指定资源文件的keys被存放在namespace下，即$.i18n.properties[namespace][key], 使用namespace可以最大限度的减少冲突和重写的概率; 默认为null不使用namespace</td>
+<td style="text-align:center">string</td>
+<td style="text-align:center">是</td>
+</tr>
+<tr>
+<td style="text-align:center">callback</td>
+<td style="text-align:center">方法执行完的回调函数</td>
+<td style="text-align:center">function</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">jQuery.i18n.properties(&#123;</span><br><span class="line">    name:&apos;Messages&apos;, </span><br><span class="line">    path:&apos;bundle/&apos;, </span><br><span class="line">    mode:&apos;both&apos;,</span><br><span class="line">    language:&apos;pt_BR&apos;,</span><br><span class="line">    async: true,</span><br><span class="line">    callback: function() &#123;</span><br><span class="line">        $(&apos;#content).html($.i18n.prop(&apos;msg_hello&apos;));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="i18n-prop-key"><a href="#i18n-prop-key" class="headerlink" title="$.i18n.prop(key)"></a>$.i18n.prop(key)</h5><p>通过key以Map的形式获取资源文件中对应的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;#content).html($.i18n.prop(&apos;msg_hello&apos;));</span><br></pre></td></tr></table></figure>
+<h5 id="i18n-normaliseLanguageCode-settings"><a href="#i18n-normaliseLanguageCode-settings" class="headerlink" title="$.i18n.normaliseLanguageCode(settings)"></a>$.i18n.normaliseLanguageCode(settings)</h5><ol>
+<li>当settings没有language属性或language属性值不符合规范时，获取浏览器的语言编码，格式化并返回语言编码。</li>
+<li>当settings中language满足要求时，格式化并返回语言编码。</li>
+</ol>
+<h4 id="未完，待续。。。"><a href="#未完，待续。。。" class="headerlink" title="未完，待续。。。"></a><font color="red">未完，待续。。。</font></h4><p>有什么意见或建议欢迎发邮件指点: 1061225829@qq.com</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/14/jquery-i18n-properties国际化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-title">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/08/设置滚动条的位置到底部/" class="archive-article-date">
-  	<time datetime="2018-01-08T03:29:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/08/设置滚动条的位置到底部/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设置滚动条的位置到底部</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/08/设置滚动条的位置到底部/">设置滚动条的位置到底部</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -241,8 +407,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
