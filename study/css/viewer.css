@@ -1,5 +1,6 @@
 .vw-viewer {
   font-size: 14px;
+  min-height: 100vh;
 }
 
 .vw-header {
@@ -33,4 +34,8 @@
   line-height: 18px;
   font-weight: 500;;
   margin-bottom: 12px;
+}
+
+#main {
+  min-height: calc(100vh - 164px);
 }
