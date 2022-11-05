@@ -13,7 +13,13 @@
 <link rel="stylesheet" href="./css/viewer.css" />
 <style>
   .container {
-    
+    font-size: 24px;
+}
+@media ( 300px<= width <= 800px) {
+    .container {
+        color: red;
+        font-size: 14px;
+    }
 }
 </style>
 </head>
@@ -31,9 +37,9 @@
           <div >
     <h3 class="vw-title">展示</h3>
     <div class="vw-demo">
-      <a>
-    abc
-</a>
+      <div  class="container">
+    css media query range
+</div>
     </div>
 </div>
           <h3 class="vw-title">代码</h3>
@@ -42,7 +48,13 @@
                 <h5>CSS代码：</h5>
   <pre name="code" class="DlHighlight css">
     .container {
-    
+    font-size: 24px;
+}
+@media ( 300px<= width <= 800px) {
+    .container {
+        color: red;
+        font-size: 14px;
+    }
 }
   </pre>
 
@@ -50,9 +62,9 @@
             <div class="vw-td">
                 <h5>HTML代码：</h5>
   <pre name="code" class="DlHighlight html">
-  &lt;a&gt;
-    abc
-&lt;/a&gt;
+  &lt;div  class=&#34;container&#34;&gt;
+    css media query range
+&lt;/div&gt;
 </pre>
 
             </div>
