@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="./css/reset.css" />
 <link rel="stylesheet" href="./css/viewer.css" />
 <style>
-  .container {
+.container {
     font-size: 24px;
 }
 @media ( 300px<= width <= 800px) {
@@ -22,32 +22,34 @@
     }
 }
 </style>
+<link
+rel="stylesheet"
+href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css"
+/>
 </head>
-
-  <body class="vw-viewer">
-    <div id="header" class="vw-header">
-      <a href="/">
-        <img alt="vwood" src="/images/logo.png" />
-      </a>
-    </div>
-  
-    <div id="main">
-      <div id="body" class="light">
-        <div id="content" class="vw-code">
-          <div >
-    <h3 class="vw-title">展示</h3>
-    <div class="vw-demo">
-      <div  class="container">
+<body class="vw-viewer">
+<div id="header" class="vw-header">
+<a href="/">
+<img alt="vwood" src="/images/logo.png" />
+</a>
+</div>
+<div id="main">
+<div id="body" class="light">
+<div id="content" class="vw-code">
+<div >
+<h3 class="vw-title">展示</h3>
+<div class="vw-demo">
+<div  class="container">
     css media query range
 </div>
-    </div>
 </div>
-          <h3 class="vw-title">代码</h3>
-          <div class="vw-table">
-            <div class="vw-td">
-                <h5>CSS代码：</h5>
-  <pre name="code" class="DlHighlight css">
-    .container {
+</div>
+<h3 class="vw-title">代码</h3>
+<div class="vw-table">
+<div class="vw-td"><h5>CSS代码：</h5>
+<pre name="code">
+<code>
+.container {
     font-size: 24px;
 }
 @media ( 300px<= width <= 800px) {
@@ -56,21 +58,27 @@
         font-size: 14px;
     }
 }
-  </pre>
-
-            </div>
-            <div class="vw-td">
-                <h5>HTML代码：</h5>
-  <pre name="code" class="DlHighlight html">
-  &lt;div  class=&#34;container&#34;&gt;
+</code>
+</pre></div>
+<div class="vw-td"><h5>HTML代码：</h5>
+<pre name="code">
+<code>
+&lt;div  class=&#34;container&#34;&gt;
     css media query range
 &lt;/div&gt;
-</pre>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+</code>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", (event) => {
+document.querySelectorAll("pre code").forEach((el) => {
+hljs.highlightElement(el);
+});
+});
+</script>
+</body>
 </html>
