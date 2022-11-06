@@ -16,7 +16,7 @@
 
 .vw-title {
   background-color: #f0f3f9;
-  padding: 4px;
+  padding: 4px 12px;
 }
 .vw-demo {
   padding: 24px 12px;
@@ -38,4 +38,5 @@
 
 #main {
   min-height: calc(100vh - 164px);
+  padding: 12px;
 }
