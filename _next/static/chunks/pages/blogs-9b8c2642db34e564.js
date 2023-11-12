@@ -1,2 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[55],{19673:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/blogs",function(){return _(66038)}])},66038:function(n,u,_){"use strict";_.r(u),_.d(u,{__N_SSG:function(){return e}});var t=_(57023),e=!0;u.default=t.default}},function(n){n.O(0,[223,23,774,888,179],function(){return n(n.s=19673)}),_N_E=n.O()}]);
-//# sourceMappingURL=blogs-9b8c2642db34e564.js.map
