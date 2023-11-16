@@ -1,0 +1,2 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[87],{895:function(n,u,c){(window.__NEXT_P=window.__NEXT_P||[]).push(["/tiny-code/create",function(){return c(28518)}])},28518:function(n,u,c){"use strict";c.r(u);var e=c(85893),t=c(94079);u.default=()=>(0,e.jsx)(t.Z,{cachaValue:!0})}},function(n){n.O(0,[611,762,736,861,713,774,888,179],function(){return n(n.s=895)}),_N_E=n.O()}]);
+//# sourceMappingURL=create-0350d112984d74f3.js.map
